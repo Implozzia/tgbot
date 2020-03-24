@@ -4,18 +4,6 @@ const bot = new Telegraf('1114073624:AAFYFY_UCuw3u6EGi9Ry6cvqS2fq1AAFN-Y');
 
 const axios = require('axios');
 
-const TelegrafInlineMenu = require('telegraf-inline-menu');
-
-/*bot.command('fortune', ctx => {
-   axios.get('http://yerkee.com/api/fortune')
-       .then(res => {
-            /!*console.log(res.data.fortune);*!/
-            ctx.reply(res.data.fortune);
-       }).catch(e => {
-           console.log(e);
-   })
-});*/
-
 const helpMessage = `
 Напиши мне что-нибудь:
 /start - начну работать
@@ -24,16 +12,6 @@ const helpMessage = `
 /cat + текст - котика с подписью
 /fact - разъебет по фактам
 `;
-
-/*const menu = new TelegrafInlineMenu(ctx => Привет ${ctx.from.first_name}!);
-menu.setCommand('start');
-menu.simpleButton('А че делать?', 'a', {
-    doFunc: ctx => ctx.reply(helpMessage)
-});
-
-bot.use(menu.init());
-
-bot.startPolling();*/
 
 bot.command('cat', async (ctx) => {
     let input = ctx.message.text;
@@ -50,7 +28,7 @@ bot.command('cat', async (ctx) => {
     } else {
         inputArray.shift();
         input = inputArray.join(" ");
-        ctx.replyWithPhoto(https://cataas.com/cat/says/${input});
+        /*ctx.replyWithPhoto(https://cataas.com/cat/says/${input});*/
     }
 });
 
