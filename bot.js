@@ -95,17 +95,6 @@ bot.help((ctx) => {
     ctx.reply(helpMessage);
 });
 
-bot.command(["test", "Test", "TEST"], (ctx) => {
-    ctx.reply("Чего проверяешь?? Все и так работатет");
-});
-
-bot.hears(["Влад", "Владик", "Владислав", "влад"], (ctx) => {
-    ctx.reply("Пидор");
-});
-
-bot.hears(["Таня", "таня"], (ctx) => {
-    ctx.reply("Жопа в трусах");
-});
 
 bot.command('kisel', ctx => {
     bot.telegram.sendChatAction(ctx.chat.id, "upload_photo");
