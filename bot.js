@@ -10,7 +10,6 @@ const helpMessage = `
 /help - список команд
 /cat - пришлю тебе рандомного котика
 /cat + текст - котика с подписью
-/fact - разъебет по фактам
 `;
 
 bot.command('cat', async (ctx) => {
